@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: en-US
+  locale: zh-CN
   baseUrl: quartz.gurodoku.xyz
   ignorePatterns:
     - private
@@ -120,6 +120,13 @@ plugins:
     options:
       theme: default
       mode: both
+    # This theme paints the page shell + left/right sidebars with
+    # `--tab-container-background` while the centre column uses
+    # `--background-primary`, which leaves the columns in two shades. It also
+    # draws a 1px divider on the left sidebar.
+    # quartz.ts injects a "PageSurfaces" stylesheet that points those surface
+    # variables at one colour (tune it via `--layout-bg` there) and removes the
+    # divider.
   - source: "@quartz-community/remove-draft"
     enabled: true
   - source: "@quartz-community/explicit-publish"
