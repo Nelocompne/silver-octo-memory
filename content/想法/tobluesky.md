@@ -24,7 +24,7 @@ Bluesky目前内容由这么几个部分组成：
 
 Github仓库： https://github.com/bluesky-social 
 
-![image.png](/images/bluesky.png)
+![[bluesky.png]]
 
 一些我关注的点：
 

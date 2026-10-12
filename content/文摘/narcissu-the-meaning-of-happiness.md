@@ -4,6 +4,7 @@ Summary: 转载自 树岛坂
 Date: 2025-10-13
 socialImage: /images/BV1cg4xzdEeY.jpg
 ---
+![[BV1cg4xzdEeY.jpg]]
 
 在历史上，幸福从来都不重要。幸福是属于“奴隶”的范畴。
 
