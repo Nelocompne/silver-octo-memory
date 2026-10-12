@@ -174,9 +174,9 @@ plugins:
     layout:
       position: left
       priority: 50
-      # "not-article" is registered in quartz.ts: show the content tree on the
-      # home page, folder listings and tag pages, but hide it on articles.
-      condition: not-article
+      # "home-only" is registered in quartz.ts: show the content tree on the
+      # home page only, hiding it on articles, folder listings and tag pages.
+      condition: home-only
   - source: "@quartz-community/graph"
     enabled: true
     layout:

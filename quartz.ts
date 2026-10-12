@@ -11,14 +11,15 @@ import type { QuartzTransformerPluginInstance } from "./quartz/plugins/types"
 const isArticle = (slug: string): boolean =>
   slug !== "index" && !slug.endsWith("/index") && slug !== "tags" && !slug.startsWith("tags/")
 
-// "not-article": render on the home page, on folder listings and on tag pages,
-// but not on individual articles. This keeps the Explorer as left-sidebar
-// navigation on landing/listing pages, while article pages leave the left
-// sidebar to the page title + toolbar (search / dark mode / reader mode).
-registerCondition("not-article", (props) => !isArticle(props.fileData.slug ?? ""))
+// "home-only": render on the home page (`index`) and nowhere else. The Explorer
+// uses it so the content tree is no longer shown on folder listings
+// (`<folder>/index`) or tag pages (`tags`, `tags/<tag>`) either — those, like
+// articles, keep just the page title + toolbar (search / dark mode / reader
+// mode) in the left sidebar.
+registerCondition("home-only", (props) => props.fileData.slug === "index")
 
 // "has-many-headings": show the article table of contents in the left sidebar
-// (the slot the Explorer occupies on listing pages) once an article has more
+// (the slot the Explorer occupies on the home page) once an article has more
 // than 3 entries in its table of contents (headings up to the configured
 // `maxDepth`). Shorter articles keep the left sidebar unchanged.
 registerCondition("has-many-headings", (props) => {
