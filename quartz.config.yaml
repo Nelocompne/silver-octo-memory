@@ -82,8 +82,12 @@ plugins:
     enabled: true
     order: 50
     layout:
-      position: right
-      priority: 30
+      # Moved from the right sidebar to the slot the Explorer uses in the left
+      # sidebar. "has-many-headings" (registered in quartz.ts) shows it only on
+      # article pages with more than 3 TOC entries.
+      position: left
+      priority: 50
+      condition: has-many-headings
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
