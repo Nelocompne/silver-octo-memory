@@ -185,8 +185,13 @@ plugins:
         grow: true
   - source: "@quartz-community/backlinks"
     enabled: true
+    options:
+      # Keep the section visible below the Graph View even when a page has no
+      # backlinks (it then shows "No backlinks found" instead of disappearing).
+      hideWhenEmpty: false
     layout:
       position: right
+      # Graph View is priority 10, so 50 keeps Backlinks directly below it.
       priority: 50
   - source: "@quartz-community/article-title"
     enabled: true
