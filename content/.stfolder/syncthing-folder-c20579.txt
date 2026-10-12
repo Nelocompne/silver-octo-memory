@@ -1,0 +1,5 @@
+# This directory is a Syncthing folder marker.
+# Do not delete.
+
+folderID: pgcub-eyrex
+created: 2026-10-11T23:21:20+08:00
