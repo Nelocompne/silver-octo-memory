@@ -1,7 +1,7 @@
 ---
 title: 水仙 _ 在历史上幸福从来都不重要，幸福属于奴隶的范畴
 Summary: 转载自 树岛坂
-Date: 2025-10-13
+date: 2025-10-13
 socialImage: /images/BV1cg4xzdEeY.jpg
 ---
 ![[BV1cg4xzdEeY.jpg]]

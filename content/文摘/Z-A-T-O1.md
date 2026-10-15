@@ -1,7 +1,7 @@
 ---
 title: 如何在虚无中读出我爱你？【Z.A.T.O.】
 Summary: 转载自 树岛坂
-Date: 2026-01-20
+date: 2026-01-20
 socialImage: /images/Z.A.T.O..jpg
 ---
 ![[Z.A.T.O..jpg]]
