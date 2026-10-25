@@ -17,9 +17,19 @@ configuration:
   theme:
     fontOrigin: googleFonts
     cdnCaching: true
+    # 站点正文与标题统一使用思源宋体（Google Fonts 上的 Noto Serif SC 即思源宋体的
+    # 同源字体）。对象写法比纯字符串多声明字重，避免只加载 400/700 两个默认字重。
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      title:
+        name: Noto Serif SC
+        weights: [400, 600, 700]
+      header:
+        name: Noto Serif SC
+        weights: [400, 600, 700]
+      body:
+        name: Noto Serif SC
+        weights: [400, 600]
+        includeItalic: false
       code: IBM Plex Mono
     colors:
       lightMode:
@@ -116,6 +126,28 @@ plugins:
     order: 92
   - source: "@quartz-community/quartz-fonts"
     enabled: true
+    # This plugin builds its own Google Fonts link instead of reading
+    # `configuration.theme`; without explicit options it re-requests the Quartz
+    # defaults (Schibsted Grotesk / Source Sans Pro) alongside the serif link.
+    options:
+      useThemeFonts: false
+      fontOrigin: googleFonts
+      title:
+        name: Noto Serif SC
+        weights: [400, 600, 700]
+      header:
+        name: Noto Serif SC
+        weights: [400, 600, 700]
+      body:
+        name: Noto Serif SC
+        weights: [400, 600]
+        includeItalic: false
+      # The theme paints `body p` with `--font-interface`; without this, article
+      # paragraphs fall back to the theme's sans stack.
+      interface:
+        name: Noto Serif SC
+        weights: [400, 600]
+      code: IBM Plex Mono
   - source: "@quartz-themes/core"
     enabled: true
     options:
@@ -178,6 +210,9 @@ plugins:
       # "home-only" is registered in quartz.ts: show the content tree on the
       # home page only, hiding it on articles, folder listings and tag pages.
       condition: home-only
+      # Desktop gets the posts/thought lists injected in quartz.ts instead
+      # (SidebarSections); the tree stays only as the mobile navigation menu.
+      display: mobile-only
   - source: "@quartz-community/graph"
     enabled: true
     layout:
@@ -189,8 +224,10 @@ plugins:
       position: left
       priority: 20
       group: toolbar
+      # No longer stretches: quartz.ts collapses it into a single icon button
+      # (the search dialog itself is unchanged).
       groupOptions:
-        grow: true
+        grow: false
   - source: "@quartz-community/backlinks"
     enabled: true
     options:
@@ -221,6 +258,11 @@ plugins:
     layout:
       position: left
       priority: 10
+      # Sits in the toolbar row so the site title and the small icon buttons
+      # share one line, as in the reference sidebar.
+      group: toolbar
+      groupOptions:
+        grow: true
   - source: "@quartz-community/darkmode"
     enabled: true
     layout:
@@ -296,7 +338,9 @@ plugins:
 layout:
   groups:
     toolbar:
-      priority: 35
+      # The group now owns the page title too, so it moves to the top of the
+      # left sidebar (was 35, after the mobile-only spacer).
+      priority: 10
       direction: row
       gap: 0.5rem
   byPageType:
