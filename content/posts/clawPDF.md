@@ -2,8 +2,7 @@
 title: 虚拟PDF打印机clawPDF实践
 date: 2024-03-07
 tags:
-  - Windows
-  - 技术
+  - trade
 ---
 
 ## 准备

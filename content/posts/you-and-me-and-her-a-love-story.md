@@ -3,6 +3,8 @@ title: 为什么我们始终在说话，却并不自知自己所说的一切？�
 Summary: 转载自 安都
 date: 2026-02-14
 socialImage: /images/君与彼女与彼女之恋.avif
+tags:
+  - prose
 ---
 ![[君与彼女与彼女之恋.avif]]
 

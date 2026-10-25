@@ -2,7 +2,7 @@
 title: ghostgum redmon
 date: 2024-02-29
 tags:
-  - seed
+  - trade
 ---
 
 设计思路来源：[GhostScript实现镜像打印输出_操作系统_网上学园_科技时代_新浪网 (sina.com.cn)](https://tech.sina.com.cn/c/2001-09-10/5733.html)，[Ghostscript, Ghostview and GSview (wisc.edu)](https://pages.cs.wisc.edu/~ghost/)

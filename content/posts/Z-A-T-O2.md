@@ -3,6 +3,8 @@ title: 《Z.A.T.O.》｜在世界中，爱才是疯言疯语
 Summary: 转载自 安都
 date: 2026-01-24
 socialImage: /images/Z.A.T.O..avif
+tags:
+  - prose
 ---
 ![[Z.A.T.O..avif]]
 

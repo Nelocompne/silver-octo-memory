@@ -3,6 +3,8 @@ title: 水仙 _ 在历史上幸福从来都不重要，幸福属于奴隶的范�
 Summary: 转载自 树岛坂
 date: 2025-10-13
 socialImage: /images/BV1cg4xzdEeY.jpg
+tags:
+  - prose
 ---
 ![[BV1cg4xzdEeY.jpg]]
 

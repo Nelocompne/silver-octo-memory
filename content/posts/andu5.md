@@ -3,6 +3,8 @@ title: 我们从未看见过真相，却必须不断地对谎言进行解释【�
 Summary: 转载自 安都
 date: 2026-03-08
 socialImage: /images/美少女万华镜5.webp
+tags:
+  - prose
 ---
 ![[美少女万华镜5.webp]]
 
