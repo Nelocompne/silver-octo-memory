@@ -12,6 +12,7 @@ configuration:
     - private
     - templates
     - 模板
+    - 草稿
     - .obsidian
   theme:
     fontOrigin: googleFonts
