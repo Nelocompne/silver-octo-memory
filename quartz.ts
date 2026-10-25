@@ -47,7 +47,7 @@ registerCondition("has-many-headings", (props) => {
 // `limit` controls how many rows each section shows before "查看其余 N 篇 →".
 const SIDEBAR_SECTIONS = [
   { title: "文章", folder: "posts", limit: 4 },
-  { title: "一些零碎", folder: "thought", limit: 4 },
+  { title: "一些零碎", folder: "thought", limit: 2 },
 ] as const
 
 const pageDate = (data: QuartzPluginData): Date | undefined => {
